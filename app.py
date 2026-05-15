@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import streamlit as st
 import pandas as pd
 import numpy as np
@@ -2496,5 +2496,5 @@ if __name__ == "__main__":
         layout="wide",
         initial_sidebar_state="expanded"
     )
->>>>>>> fd3332f358b452fe329b51b89b01e6d814a2bf88
+
     main()
