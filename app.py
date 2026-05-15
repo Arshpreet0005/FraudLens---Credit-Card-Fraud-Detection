@@ -10,6 +10,33 @@ from datetime import datetime
 import hashlib
 import warnings
 warnings.filterwarnings('ignore')
+import os
+
+from huggingface_hub import hf_hub_download
+
+HF_REPO_ID = "Akrodriguez/Fraudlens"
+
+REQUIRED_FILES = [
+    "random_forest_model.pkl",
+    "scaler.pkl",
+    "label_encoders.pkl",
+    "feature_names.pkl",
+    "xgboost_model.pkl",
+    "decision_tree_model.pkl",
+    "logistic_regression_model.pkl",
+    # add any other .pkl you load in code
+]
+
+@st.cache_resource
+def ensure_artifacts():
+    for f in REQUIRED_FILES:
+        if not os.path.exists(f):
+            hf_hub_download(
+                repo_id=HF_REPO_ID,
+                filename=f,
+                local_dir=".",                 # put a copy in the app folder
+                local_dir_use_symlinks=False   # avoid symlink issues
+            )
 
 # ==================== AUTHENTICATION SYSTEM ====================
 
