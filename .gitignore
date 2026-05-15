@@ -205,6 +205,7 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+<<<<<<< HEAD
 
 # Project-specific ignores
 data/
@@ -216,3 +217,5 @@ models/
 # Jupyter outputs (optional, if you have many notebooks)
 .ipynb_checkpoints/
 
+=======
+>>>>>>> fd3332f358b452fe329b51b89b01e6d814a2bf88
