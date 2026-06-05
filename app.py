@@ -15,7 +15,7 @@ import os
 
 from huggingface_hub import hf_hub_download
 
-HF_REPO_ID = "Akrodriguez/Fraudlens"
+HF_REPO_ID = "Arshpreet0005/Fraudlens"
 
 REQUIRED_FILES = [
     "random_forest_model.pkl",
